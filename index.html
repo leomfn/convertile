@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ConverTile - convert between MVT and UTM coordinates</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <label>MVT (z,x,y)</label>
+            <div class="inputGroup">
+                <input id="mvtInputZoom" type="text" placeholder="zoom" />
+                <input id="mvtInputX" type="text" placeholder="x" />
+                <input id="mvtInputY" type="text" placeholder="y" />
+            </div>
+            <button id="convertToUTMButton">to UTM</button>
+        </div>
+        <div class="item">
+            <label>UTM (lon,lat)</label>
+            <div class="inputGroup">
+                <input id="utmInputLon" type="text" placeholder="lon" />
+                <input id="utmInputLat" type="text" placeholder="lat" />
+            </div>
+            <button id="convertToMVTButton">to MVT</button>
+        </div>
+    </div>
+</body>
+
+</html>
