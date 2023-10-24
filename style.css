@@ -1,71 +1,98 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FFEEC0;
     display: flex;
-    justify-content: center;
+    background: #FFEEC0;
+    font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    min-height: 100vh;
-    padding: 3%;
+    justify-content: center;
+    margin: 2rem;
+    padding: 0;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3%;
+    flex-direction: row;
+    justify-content: center;
     background-color: #FFDAB9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 80vw;
-    max-width: 80%; /* Max width to prevent stretching on larger screens */
-    text-align: center;
+    padding: 0 1rem;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.title {
+    color: #466362;
 }
 
 .item {
-    width: 80%;
-    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.2rem 0.5rem;
+    flex: 1;
+    min-width: 120px;
 }
 
-.inputGroup {
+.item-half-size {
+    flex: 0.5;
+}
+
+.input-half-size {
+    width: 50px;
+}
+
+.input-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hint {
+    color: #466362;
+    font-size: 0.4em;
+    visibility: hidden;
 }
 
 label {
+    font-size: 1.5em;
     font-weight: bold;
-    font-size: 2vw;
     color: #FF8C7A;
-    margin: 5px 0;
+    margin: 0.3rem 0;
+    white-space: nowrap;
 }
 
 input {
-    padding: 1vw;
-    border: 2px solid #FFA07A;
-    border-radius: 5px;
-    font-size: 1.5vw;
-    width: 100%;
-    margin: 5px;
+    margin: 0 0 0.2rem 0;
+    padding: 0.2rem;
+    width: 120px;
+    color: #466362;
+}
+
+input:focus-visible {
+    outline-style: none;
 }
 
 button {
-    padding: 1vw 1.5vw;
     background-color: #FF8C7A;
-    color: #fff;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 2vw;
-    width: 30%;
-    margin: 10px 0;
+    margin: 0.8rem;
+    padding: 0.5rem 0.8rem;
 }
 
 button:hover {
-    background-color: #FFA07A;
+    background-color: #73877B;
 }
